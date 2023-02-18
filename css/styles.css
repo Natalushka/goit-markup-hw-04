@@ -512,7 +512,6 @@ img {
 }
 
 .team-job {
-  margin-top: 0px;
   margin-bottom: 8px;
   background-color: var(--color-white);
   color: var(--color-secondary);
