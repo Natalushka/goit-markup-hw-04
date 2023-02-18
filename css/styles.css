@@ -12,6 +12,8 @@
   --button: #4d5ae5;
   --border: #000;
   --shadow: rgba(0, 0, 0, 0.25);
+  --color-footer-link-hover: #31d0aa;
+  --color-customers-icon: #8e8f99;
 }
 
 html {
@@ -70,7 +72,6 @@ p {
 
 img {
   display: block;
-  max-width: 100%;
   height: auto;
 }
 
@@ -109,6 +110,7 @@ img {
 .nav-link:focus {
   color: var(--color-accent);
 }
+
 .site-contacts {
   display: flex;
   gap: 40px;
@@ -306,7 +308,7 @@ img {
 }
 
 .primary-button:hover {
-  background-color: var(--button);
+  background-color: var(--color-accent);
 }
 
 .primary-button:focus {
@@ -386,6 +388,14 @@ img {
   text-align: center;
   background-color: var(--color-background);
   padding: 188px 0;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url("..//images/people_office_1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
 }
 
 .hero-title {
@@ -399,15 +409,31 @@ img {
 
 /* Advantages section */
 
+.list-item-icon {
+  width: 59.72px;
+  height: 64px;
+}
+
 .advantage-card {
   display: flex;
   gap: 24px;
   vertical-align: middle;
 }
 
+.advantage-thumb {
+  display: flex;
+  gap: 24px;
+  vertical-align: middle;
+  width: 264px;
+  height: 112px;
+  background: #f4f4fd;
+  justify-content: center;
+  align-items: center;
+}
+
 .advantage-card-title {
   margin-bottom: 8px;
-  margin-top: 0;
+  margin-top: 8px;
   color: var(--color-dark);
   font-weight: 500;
   font-size: 20px;
@@ -426,7 +452,7 @@ img {
 
 .team {
   background-color: var(--color-filtres);
-  padding: 120px 0;
+  padding: 120px;
 }
 
 .team-card {
@@ -437,8 +463,33 @@ img {
 }
 
 .person {
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding: 32px 16px;
+  text-align: center;
+}
+
+.person-social-media-list {
+  display: flex;
+  gap: 24px;
+}
+
+.person-social-media-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: #4d5ae5;
+  color: var(--color-button);
+}
+
+.person-social-media-link:focus {
+  background-color: var(--color-accent);
+}
+
+.person-social-media-link:hover {
+  background-color: var(--color-accent);
 }
 
 .team-title {
@@ -448,7 +499,6 @@ img {
   line-height: 1.11;
   text-align: center;
   text-transform: none;
-  margin: 0 auto 72px;
   letter-spacing: 0.02em;
 }
 
@@ -468,23 +518,69 @@ img {
   line-height: 1.2;
   letter-spacing: 0.02em;
   text-align: center;
-  margin: 0 auto;
+  margin-bottom: 8px;
+  margin-top: 0;
 }
 
 .team-job {
+  margin-top: 0px;
+  margin-bottom: 8px;
   background-color: var(--color-white);
   color: var(--color-secondary);
   font-size: 16px;
   line-height: 1.2;
   text-align: center;
-  padding-top: 8px;
-  margin: 0 auto;
+}
+
+.сustomers-title {
+  text-align: center;
+  margin-bottom: 72px;
+  margin-top: 0;
+  font-size: 36px;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  color: var(--color-dark);
+}
+
+.сustomers {
+  padding: 120px 0;
+}
+
+.сustomers-list {
+  display: flex;
+  gap: 24px;
+}
+
+.сustomers-icon {
+  margin-top: 16px;
+  width: 168px;
+  fill: currentColor;
+}
+
+.сustomers-link {
+  display: block;
+  text-align: center;
+  width: 168px;
+  height: 88px;
+  color: var(--color-customers-icon);
+  border: 1px solid var(--color-customers-icon);
+  border-radius: 4px;
+}
+
+.сustomers-link:hover,
+.сustomers-link:focus {
+  color: #404bbf;
 }
 
 .portfolio.list {
   display: flex;
   gap: 48px 24px;
   flex-wrap: wrap;
+}
+
+.portfolio-one:hover {
+  box-shadow: 0px 1px 6px rgb(46 47 66 / 8%), 0px 1px 1px rgb(46 47 66 / 16%),
+    0px 2px 1px rgb(46 47 66 / 8%);
 }
 
 .portfolio-box {
@@ -564,4 +660,48 @@ img {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+}
+
+.footer-title {
+  margin-top: 0;
+  margin-bottom: 16px;
+  margin-left: 120px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-white);
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+}
+
+.footer-social-media-list {
+  display: flex;
+  margin-left: 120px;
+  gap: 16px;
+  justify-content: center;
+}
+
+.footer-social-media-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-button);
+}
+
+.footer-social-media-link:hover {
+  background-color: var(--color-footer-link-hover);
+}
+
+.footer-social-media-link:focus {
+  background-color: var(--color-footer-link-hover);
 }
